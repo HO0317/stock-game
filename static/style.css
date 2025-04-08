@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* 8비트 터미널 테마 - 명령어 느낌 */
+body {
+  margin: 0;
+  padding: 0 20px;
+  background: #000;
+  color: #0f0;
+  font-family: 'Press Start 2P', monospace;
+  image-rendering: pixelated;
+}
+
+#toast {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #002200;
+  color: #0f0;
+  border: 1px solid #0f0;
+  padding: 5px;
+  font-size: 0.7em;
+  display: none;
+  z-index: 1000;
+}
+
+header {
+  background: #000;
+  padding: 10px;
+  border-bottom: 1px solid #0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1em;
+}
+
+#stats {
+  display: flex;
+  gap: 20px;
+  font-size: 0.8em;
+}
+
+main {
+  padding: 10px 0;
+}
+
+h2 {
+  font-size: 0.9em;
+  margin: 10px 0 5px;
+  border-bottom: 1px solid #0f0;
+  padding-bottom: 2px;
+}
+
+/* 뉴스 섹션 */
+#news-section {
+  background: #000;
+  border: 1px solid #0f0;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+#news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#news-list li {
+  font-size: 0.8em;
+  margin: 2px 0;
+}
+
+/* 기업 목록 (좌우 스크롤) */
+#companies-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  background: #000;
+  border: 1px solid #0f0;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+#companies-container {
+  display: inline-flex;
+  gap: 5px;
+}
+
+/* 기업 카드 */
+.company-card {
+  background: #000;
+  border: 1px solid #0f0;
+  color: #0f0;
+  width: 160px;
+  padding: 5px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: background 0.1s, border-color 0.1s;
+}
+.company-card.selected {
+  background: #0f0;
+  color: #000;
+}
+.company-card h3 {
+  margin: 2px 0;
+  font-size: 0.8em;
+}
+.price-info {
+  font-size: 0.8em;
+  margin: 2px 0;
+}
+.quantity-selector,
+.action-buttons {
+  display: flex;
+  gap: 5px;
+  margin: 5px 0;
+}
+.quantity-selector button,
+.action-buttons button {
+  background: #000;
+  color: #0f0;
+  border: 1px solid #0f0;
+  padding: 2px 4px;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+.quantity-selector button:hover,
+.action-buttons button:hover {
+  background: #0f0;
+  color: #000;
+}
+
+/* 차트 섹션 */
+#chart-section {
+  background: #000;
+  border: 1px solid #0f0;
+  padding: 5px;
+}
+#chart-section canvas {
+  display: block;
+  width: 100%;
+  height: 150px;
+  margin-top: 5px;
+}
+
+/* 스마트폰 채팅 버튼 */
+#open-phone {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0f0;
+  color: #000;
+  border: 1px solid #0f0;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* 스마트폰 채팅 위젯 */
+#phone-widget {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background: #000;
+  border: 1px solid #0f0;
+  display: none;
+  flex-direction: column;
+  z-index: 1001;
+  font-size: 0.8em;
+}
+#phone-header {
+  background: #000;
+  color: #0f0;
+  padding: 8px;
+  border-bottom: 1px solid #0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#phone-close {
+  cursor: pointer;
+}
+#phone-messages {
+  flex: 1;
+  padding: 8px;
+  overflow-y: auto;
+  font-size: 0.8em;
+}
+.phone-message.user {
+  text-align: right;
+  color: #00ffff;
+}
+.phone-message.bot {
+  text-align: left;
+  color: #ff00ff;
+}
+#phone-input-area {
+  display: flex;
+  border-top: 1px solid #0f0;
+}
+#phone-input {
+  flex: 1;
+  padding: 6px;
+  background: #000;
+  color: #0f0;
+  border: none;
+  font-size: 0.8em;
+}
+#phone-send {
+  padding: 6px 10px;
+  background: #0f0;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8em;
+}

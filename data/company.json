@@ -1,0 +1,9 @@
+{
+  "companies": [
+    { "id": 1, "name": "Samsung", "price": 100.0, "tendency": 0.0 },
+    { "id": 2, "name": "LG", "price": 150.0, "tendency": 0.0 },
+    { "id": 3, "name": "Hanwha", "price":  80.0, "tendency": 0.0 },
+    { "id": 4, "name": "KIA", "price": 200.0, "tendency": 0.0 },
+    { "id": 5, "name": "Hyundai", "price": 120.0, "tendency": 0.0 }
+  ]
+}

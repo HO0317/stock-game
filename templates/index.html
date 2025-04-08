@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>RSG:Online</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="toast"></div>
+    <header>
+        <h1>RSG:Online</h1>
+        <div id="stats">
+            <div id="cash">현금: $0.00</div>
+            <div id="potential">총 자산: $0.00</div>
+            <div id="portfolio">포트폴리오: 없음</div>
+        </div>
+    </header>
+    <main>
+        <section id="news-section">
+            <h2>뉴스</h2>
+            <ul id="news-list"></ul>
+        </section>
+        <section id="companies-wrapper">
+            <h2>기업 목록</h2>
+            <div id="companies-container"></div>
+        </section>
+        <section id="chart-section">
+            <h2 id="chart-title">기업을 선택하세요</h2>
+            <canvas id="priceChart"></canvas>
+        </section>
+    </main>
+
+    <!-- 스마트폰 채팅 버튼 & 위젯 -->
+    <button id="open-phone">📱</button>
+    <div id="phone-widget">
+        <div id="phone-header">
+            Chat <span id="phone-close">×</span>
+        </div>
+        <div id="phone-messages"></div>
+        <div id="phone-input-area">
+            <input type="text" id="phone-input" placeholder="메시지를 입력하세요..." />
+            <button id="phone-send">전송</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
